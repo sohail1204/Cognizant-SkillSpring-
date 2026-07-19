@@ -1,0 +1,1 @@
+This is the second sample file, demonstrating branch isolation in Git.

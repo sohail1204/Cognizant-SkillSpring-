@@ -1,0 +1,5 @@
+# Simulated Remote
+remote.git/
+
+# OS files
+.DS_Store

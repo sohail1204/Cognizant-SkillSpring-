@@ -1,0 +1,5 @@
+# Ignore backup directory
+backup/
+
+# Ignore all backup files with .bak extension
+*.bak

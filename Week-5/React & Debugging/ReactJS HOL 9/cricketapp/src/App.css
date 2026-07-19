@@ -1,0 +1,362 @@
+/* Modern CSS variables and reset */
+:root {
+  --primary-color: #2e7d32; /* Cricket turf green */
+  --primary-light: #4caf50;
+  --secondary-color: #1976d2; /* India cricket blue */
+  --accent-color: #ff9800; /* Warm orange */
+  --bg-dark: #0f172a; /* Slate 900 background */
+  --bg-card: #1e293b; /* Slate 800 cards */
+  --border-color: #334155; /* Slate 700 borders */
+  --text-main: #f8fafc; /* Slate 50 text */
+  --text-muted: #94a3b8; /* Slate 400 text */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #020617;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #a7f3d0, #34d399, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  margin: 0.3rem 0 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Toggle Switch / Controls Card */
+.toggle-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-card);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.toggle-status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.flag-value {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.flag-true {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: var(--primary-light);
+}
+
+.flag-false {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.toggle-btn {
+  background-color: var(--primary-color);
+  color: var(--text-main);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-default);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Main Area Container */
+.App-main {
+  flex: 1;
+  padding: 2rem;
+  max-inline-size: 1200px;
+  margin: 0 auto;
+  inline-size: -webkit-fill-available;
+}
+
+/* Component Containers */
+.player-list-container,
+.indian-players-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  border-inline-start: 4px solid var(--primary-color);
+  padding-inline-start: 0.75rem;
+}
+
+.section-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+  max-inline-size: 800px;
+}
+
+/* Card layout styles */
+.card {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-default);
+}
+
+.card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.filtered-card {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+.filtered-card:hover {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+.filtered-card h3 {
+  color: #f87171;
+  border-bottom-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Tables Styling */
+.players-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.players-table th,
+.players-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.players-table th {
+  background-color: rgba(15, 23, 42, 0.6);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.players-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.players-table tr:last-child td {
+  border-bottom: none;
+}
+
+.score-cell {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.low-score-row {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.low-score-row:hover td {
+  background-color: rgba(239, 68, 68, 0.08) !important;
+}
+
+/* Grid layout for Odd/Even Team lists */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Lists styling */
+.players-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background-color: rgba(15, 23, 42, 0.4);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: var(--transition-default);
+}
+
+.player-item:hover {
+  background-color: rgba(15, 23, 42, 0.6);
+  transform: translateX(4px);
+}
+
+.odd-item:hover {
+  border-color: rgba(25, 118, 210, 0.3);
+}
+
+.even-item:hover {
+  border-color: rgba(255, 152, 0, 0.3);
+}
+
+.bullet {
+  font-size: 0.9rem;
+}
+
+/* Merged Card styling */
+.merged-card h3 {
+  color: var(--secondary-color);
+  border-bottom-color: rgba(25, 118, 210, 0.2);
+}
+
+.pool-info {
+  background-color: rgba(15, 23, 42, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pool-info strong {
+  color: var(--text-main);
+}
+
+/* Badges styling */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.badge-t20 {
+  background-color: rgba(25, 118, 210, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(25, 118, 210, 0.3);
+}
+
+.badge-ranji {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+/* Footer Styles */
+.App-footer {
+  background-color: #020617;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.App-footer p {
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .toggle-card {
+    inline-size: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .App-main {
+    padding: 1rem;
+  }
+}

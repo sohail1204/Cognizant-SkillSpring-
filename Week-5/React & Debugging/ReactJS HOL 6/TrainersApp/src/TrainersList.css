@@ -1,0 +1,55 @@
+.trainers-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.list-header {
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  margin-top: 0;
+}
+
+.trainers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.trainers-table th,
+.trainers-table td {
+  border: 1px solid #000000;
+  padding: 8px;
+  text-align: left;
+}
+
+.trainers-table th {
+  background-color: #f2f2f2;
+}
+
+.id-badge {
+  font-weight: normal;
+}
+
+.trainer-link-name {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.trainer-link-name:hover {
+  color: #551a8b;
+}
+
+.tech-badge {
+  font-weight: normal;
+}
+
+.btn-view-details {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.btn-view-details:hover {
+  color: #551a8b;
+}

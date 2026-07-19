@@ -1,0 +1,26 @@
+/* CSS Module for Cohort Details Component */
+
+/* 
+  The .box class styles the outer container of each cohort card.
+  It gives it a fixed width, makes cards lay out side-by-side, 
+  and applies standard padding, margin, border, and rounded corners.
+*/
+.box {
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* 
+  Styling for the html <dt> (definition term) tag.
+  It increases the font-weight of the label elements inside the description list.
+*/
+dt {
+    font-weight: 500;
+}

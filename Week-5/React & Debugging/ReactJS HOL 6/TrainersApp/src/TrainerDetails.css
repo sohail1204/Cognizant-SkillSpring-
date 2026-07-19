@@ -1,0 +1,108 @@
+.trainer-detail-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.trainer-detail-card {
+  border: 1px solid #000000;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.card-header-gradient {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.detail-id-badge {
+  font-weight: bold;
+}
+
+.detail-tech-badge {
+  font-style: italic;
+}
+
+.detail-name {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.card-content {
+  margin-bottom: 20px;
+}
+
+.info-grid {
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+.info-value {
+  display: inline-block;
+}
+
+.skills-block {
+  border-top: 1px solid #cccccc;
+  padding-top: 15px;
+}
+
+.skills-heading {
+  margin: 0 0 10px 0;
+}
+
+.skills-badges-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge-item {
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border: 1px solid #999999;
+  font-size: 0.9rem;
+}
+
+.card-footer-action {
+  margin-top: 20px;
+}
+
+.btn-back-link {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.btn-back-link:hover {
+  color: #551a8b;
+}
+
+.trainer-not-found {
+  border: 1px solid #ff0000;
+  padding: 20px;
+  background-color: #fff0f0;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #000000;
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1px solid #999999;
+}

@@ -1,0 +1,56 @@
+/* Custom modern styles for App.js */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 10% 20%, rgb(239, 246, 255) 0%, rgb(219, 228, 255) 100%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: #2d3748;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.App-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    margin-top: 30px;
+  }
+  .App-header h1 {
+    font-size: 2rem;
+  }
+}
+
